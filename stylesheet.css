@@ -1,0 +1,10 @@
+div {
+    height: 260px;
+    width: 1000px;
+    border-radius: 5px;
+    background-color: #121212;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    opacity: 1.0;
+}
