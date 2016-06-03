@@ -17,3 +17,8 @@
 	display: none;
 	background-color:red;
 }
+*/
+div {
+    position: relative;
+    left: 10px;
+}
