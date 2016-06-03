@@ -19,10 +19,11 @@ $(document).ready(function(){
 	$( "#leftButton" ).click(function(){
   		$( "#elephant" ).animate({ "left": "-=50px" }, "slow" );
 	});
-	// $('#rightButton').click(function(){
-	// 	$('#elephant').animate({"left": "+=50px"}, "slow");
-	// });
-	// $('#leftButton').click(function(){
-	// 	$('#elephant').animate({"left": "-=50px"}, "slow");
-	// });
+
+	$( "#explode" ).click(function(){
+		$( "#elephant").hide("explode", {pieces: 16}, 2000);
+	});
+	$( "#piece-together" ).click(function(){
+		$( "#elephant").show("explode", {pieces: 16}, 2000);
+	});
 });
