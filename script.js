@@ -30,43 +30,43 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#rotate1").click(function(){
-		$("#moon-donut").rotate();
-	});
+		$(this).rotate();
+	}).click();
 
 	$('#rotate2').click(function() {
-    	$("#moon-donut").rotate({ count:4, duration:0.6, easing:'ease-out' });
+    	$(this).rotate({ count:4, duration:0.6, easing:'ease-out' });
   	});
-  $('#rotate3').click(function() {
-    $("#moon-donut").rotate({ endDeg:180, persist:true });
-  }, function() {
-    $("#moon-donut").rotate({ endDeg:360 });
-  });
+	$('#rotate3').click(function() {
+		$(this).rotate({ endDeg:180, persist:true });
+		}, function() {
+		$(this).rotate({ endDeg:360 });
+	});
 
-  $('#rotate4').click(function() {
-    $("#moon-donut").rotate({ endDeg:180, persist:true });
-  }, function() {
-    $("#moon-donut").rotate({ endDeg:-360, duration:0.8, easing:'ease-in' });
-  });
+	$('#rotate4').click(function() {
+	    $(this).rotate({ endDeg:180, persist:true });
+	  }, function() {
+	    $(this).rotate({ endDeg:-360, duration:0.8, easing:'ease-in' });
+	});
 
-  $('#rotate5').click(function() {
-    $("#moon-donut").rotate({ startDeg:-25, endDeg:0, easing:'ease-in' });
-  });
+	$('#rotate5').click(function() {
+	    $(this).rotate({ startDeg:-25, endDeg:0, easing:'ease-in' });
+	});
 
-  $('#rotate6').click(function() {
-    $("#moon-donut")
-      .css({ position:'relative', left:0 })
-      .rotate({ count:2, easing:'ease-in', animate:{ left:120 } })
-      .fadeTo(400, 0.1)
-      .fadeTo(300, 1)
-      .delay(200)
-      .rotate({ endDeg:-360, count:3, easing:'ease-out', animate:{ left:0 } });
-  });
+	$('#rotate6').click(function() {
+	    $(this)
+	      .css({ position:'relative', left:0 })
+	      .rotate({ count:2, easing:'ease-in', animate:{ left:120 } })
+	      .fadeTo(400, 0.1)
+	      .fadeTo(300, 1)
+	      .delay(200)
+	      .rotate({ endDeg:-360, count:3, easing:'ease-out', animate:{ left:0 } });
+	});
 
-  $('#rotate7').click(function() {
-    $("#moon-donut").rotate({ count:99999, forceJS:true });
-  }, function() {
-    $("moon-donut").stop();
-  });
+	$('#rotate7').click(function() {
+	    $(this).rotate({ count:99999, forceJS:true });
+	 	}, function() {
+	   	$(this).stop();
+	});
 });
 
 
