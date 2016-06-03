@@ -32,24 +32,44 @@ $(document).ready(function(){
 	$("#rotate1").click(function(){
 		$("#moon-donut").rotate();
 	});
+
+	$('#rotate2').click(function() {
+    	$("#moon-donut").rotate({ count:4, duration:0.6, easing:'ease-out' });
+  	});
+  $('#rotate3').click(function() {
+    $("#moon-donut").rotate({ endDeg:180, persist:true });
+  }, function() {
+    $("#moon-donut").rotate({ endDeg:360 });
+  });
+
+  $('#rotate4').click(function() {
+    $("#moon-donut").rotate({ endDeg:180, persist:true });
+  }, function() {
+    $("#moon-donut").rotate({ endDeg:-360, duration:0.8, easing:'ease-in' });
+  });
+
+  $('#rotate5').click(function() {
+    $("#moon-donut").rotate({ startDeg:-25, endDeg:0, easing:'ease-in' });
+  });
+
+  $('#rotate6').click(function() {
+    $("#moon-donut")
+      .css({ position:'relative', left:0 })
+      .rotate({ count:2, easing:'ease-in', animate:{ left:120 } })
+      .fadeTo(400, 0.1)
+      .fadeTo(300, 1)
+      .delay(200)
+      .rotate({ endDeg:-360, count:3, easing:'ease-out', animate:{ left:0 } });
+  });
+
+  $('#rotate7').click(function() {
+    $("#moon-donut").rotate({ count:99999, forceJS:true });
+  }, function() {
+    $("moon-donut").stop();
+  });
 });
 
-/*
-<div class="chocolate-sprinkle-buttons">
-			<h2>Rotating Donut</h2>
-		<div id="moon-donut">
-			<div class="chocolate-sprinkle"><img src="img/chocolatesprinkle.jpg"/></div>
-		
-		<input type="button" value="Easy Spin" id="rotate1">
-		<input type="button" value="Fast Spin" id="rotate2">
-		<input type="button" value="Half Spin" id="rotate3">
-		<input type="button" value="Easy Fast BackSpin" id="rotate4">
-		<input type="button" value="45 degrees" id="rotate5">
-		<input type="button" value="Off and backspin" id="rotate6">	
-		<input type="button" value="Indefinite" id="rotate7">
 
-	</div>
-*/
 
 
 /*
